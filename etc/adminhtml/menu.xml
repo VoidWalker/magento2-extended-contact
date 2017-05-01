@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sohan_ExtendedContact::contact_request" title="Contact Requests" translate="title"
+             module="Sohan_ExtendedContact" sortOrder="50" parent="Magento_Customer::customer"
+             action="sohan_contact/request" resource="Sohan_ExtendedContact::sohan_contact"/>
+    </menu>
+</config>
