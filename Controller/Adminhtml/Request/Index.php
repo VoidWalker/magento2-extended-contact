@@ -32,7 +32,7 @@ class Index extends \Sohan\ExtendedContact\Controller\Adminhtml\Request
     {
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $this->initPage($resultPage)->getConfig()->getTitle()->prepend(__('Requests'));
+        $this->initPage($resultPage)->getConfig()->getTitle()->prepend(__('Contact Requests'));
 
         $dataPersistor = $this->_objectManager->get('Magento\Framework\App\Request\DataPersistorInterface');
         $dataPersistor->clear('sohan_contact_request');
