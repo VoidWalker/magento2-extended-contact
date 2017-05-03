@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="contact_request_listing_data_source" xsi:type="string">Sohan\ExtendedContact\Model\ResourceModel\ContactRequest\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Sohan\ExtendedContact\Model\ResourceModel\ContactRequest\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sohan_extendedcontact_contact_request</argument>
+            <argument name="eventPrefix" xsi:type="string">sohan_extendedcontact_contact_request_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">contact_request_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Sohan\ExtendedContact\Model\ResourceModel\ContactRequest</argument>
+        </arguments>
+    </type>
+</config>
