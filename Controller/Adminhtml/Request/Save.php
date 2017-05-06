@@ -62,7 +62,7 @@ class Save extends \Magento\Cms\Controller\Adminhtml\Block
 
             try {
                 $model->save();
-                $this->messageManager->addSuccess(__('You saved the block.'));
+                $this->messageManager->addSuccess(__('You saved the request.'));
                 $this->dataPersistor->clear('contact_request');
 
                 if ($this->getRequest()->getParam('back')) {
