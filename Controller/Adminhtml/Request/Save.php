@@ -8,7 +8,7 @@ use Sohan\ExtendedContact\Model\ContactRequestFactory;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Exception\LocalizedException;
 
-class Save extends \Magento\Cms\Controller\Adminhtml\Block
+class Save extends \Sohan\ExtendedContact\Controller\Adminhtml\Request
 {
     /**
      * @var DataPersistorInterface

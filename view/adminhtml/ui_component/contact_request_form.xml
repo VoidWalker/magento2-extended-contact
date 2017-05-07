@@ -57,7 +57,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">boolean</item>
-                    <item name="label" xsi:type="string" translate="true">Request Status</item>
+                    <item name="label" xsi:type="string" translate="true">Request Answered</item>
                     <item name="formElement" xsi:type="string">checkbox</item>
                     <item name="source" xsi:type="string">request</item>
                     <item name="sortOrder" xsi:type="number">10</item>

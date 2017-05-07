@@ -14,7 +14,6 @@ class ContactRequestActions extends Column
      */
     const URL_PATH_EDIT = 'sohan_contact/request/edit';
     const URL_PATH_DELETE = 'sohan_contact/request/delete';
-    const URL_PATH_DETAILS = 'sohan_contact/request/details';
 
     /**
      * @var UrlInterface
@@ -75,8 +74,8 @@ class ContactRequestActions extends Column
                             ),
                             'label' => __('Delete'),
                             'confirm' => [
-                                'title' => __('Delete "${ $.$data.title }"'),
-                                'message' => __('Are you sure you wan\'t to delete a "${ $.$data.title }" record?')
+                                'title' => __('Delete'),
+                                'message' => __('Are you sure you want to delete this record?')
                             ]
                         ]
                     ];

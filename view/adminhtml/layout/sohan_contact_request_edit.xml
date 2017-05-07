@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
 
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="styles"/>
     <update handle="editor"/>
     <body>
         <referenceContainer name="content">
             <uiComponent name="contact_request_form"/>
+            <block class="Sohan\ExtendedContact\Block\Adminhtml\Edit\Reply" name="content.request.reply"
+                   template="Sohan_ExtendedContact::reply_form.phtml"/>
         </referenceContainer>
     </body>
 </page>
