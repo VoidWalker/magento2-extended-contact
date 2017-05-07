@@ -21,6 +21,21 @@ class SaveContactRequest implements ObserverInterface
         $postData = $observer->getRequest()->getPostValue();
 
         try {
+            $error = false;
+
+            if (!\Zend_Validate::is(trim($postData['name']), 'NotEmpty')) {
+                $error = true;
+            }
+            if (!\Zend_Validate::is(trim($postData['email']), 'EmailAddress')) {
+                $error = true;
+            }
+            if (!\Zend_Validate::is(trim($postData['comment']), 'NotEmpty')) {
+                $error = true;
+            }
+            if ($error) {
+                throw new \Exception();
+            }
+
             $contactRequest = $this->contactRequestFactory->create();
 
             $contactRequest->setName($postData['name']);
@@ -30,7 +45,7 @@ class SaveContactRequest implements ObserverInterface
 
             $contactRequest->save();
         } catch (\Exception $e) {
-            throw new \Exception('Oops!');
+            throw new \Exception('Something went wrong while saving your request');
         }
     }
 } 
